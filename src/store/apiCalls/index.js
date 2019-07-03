@@ -1,9 +1,9 @@
 import * as apiMutations from '@/api/api-mutations';
 import apiActions from '@/api/api-actions';
+import initialState from '@/initial_states/api-calls-state';
 
 export const state = () => ({
-    todos: {        
-    }
+    ...initialState
 });
 
 export const actions = {
