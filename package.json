@@ -1,0 +1,23 @@
+{
+  "name": "nuxt-vuex-template",
+  "version": "1.0.0",
+  "description": "Template for creating applications with vue, nuxt and vuex",
+  "main": "index.js",
+  "scripts": {
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "dev": "nuxt"
+  },
+  "author": "Aleksandar Stojanoski",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.19.0",
+    "bootstrap-vue": "^2.0.0-rc.25",
+    "luxon": "^1.16.0",
+    "nuxt": "^2.8.1"
+  },
+  "devDependencies": {
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0"
+  }
+}
