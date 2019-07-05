@@ -30,3 +30,4 @@ This is a template for Vue/Nuxt application with Vuex.
 *   node-sass
 *   sass-loader
 *   vuex
+*   lodash
