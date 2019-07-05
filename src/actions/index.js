@@ -1,7 +1,7 @@
-import { setSomething } from './set-something';
+import { setValue } from './set-value';
 
 const actions = {
-    setSomething,
+    setValue,
 };
 
 export default actions;

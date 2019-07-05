@@ -1,7 +1,7 @@
-import { SET_SOMETHING } from './set-something';
+import { SET_VALUE } from './set-value';
 
 const mutations = {
-    SET_SOMETHING,
+    SET_VALUE,
 };
 
 export default mutations;

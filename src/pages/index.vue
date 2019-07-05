@@ -11,16 +11,16 @@
                 <b-btn variant="warning" v-on:click="apiCallReset('todos')">Reset</b-btn>
             </b-col>
             <b-col>
-                <b-input v-on:keyup="handleChange($event)" placeholder="Enter something"></b-input>
+                <b-input v-on:keyup="handleChange($event)" placeholder="Enter something" :value="form.inputField"></b-input>
             </b-col>
         </b-row>
         <b-row style="margin-top:2%">
             <b-col>
                 <b-alert
                     variant="info"
-                    :show="something === '' ? false : true"
+                    :show="form.inputField === '' ? false : true"
                 >
-                    {{something}}
+                    {{form.inputField}}
                 </b-alert>
             </b-col>
         </b-row>
@@ -44,7 +44,7 @@
                 'todos'
             ]),
             ...mapState([
-                'something'
+                'form'
             ])
         },
         methods: {
@@ -54,7 +54,7 @@
             ]),
 
             ...mapActions([
-                'setSomething',
+                'setValue',
             ]),
 
             handleLoadList() {
@@ -62,7 +62,10 @@
             },
 
             handleChange(event) {
-                this.setSomething(event.target.value);
+                this.setValue({
+                    stateKey: 'form.inputField',
+                    value: event.target.value
+                });
             }
         }
     }

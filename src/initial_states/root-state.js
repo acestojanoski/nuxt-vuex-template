@@ -1,5 +1,7 @@
 const initialState = {
-    something: ''
+    form: {
+        inputField: ''
+    }
 };
 
 export default initialState;
