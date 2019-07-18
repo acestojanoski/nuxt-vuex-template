@@ -2,16 +2,35 @@
     <b-container class="home">
         <b-row>
             <b-col>
-                <b-alert variant="success" show>Nuxt Vuex Template</b-alert>
+                <b-alert
+                    variant="success"
+                    show
+                >
+                    Nuxt Vuex Template
+                </b-alert>
             </b-col>
         </b-row>
         <b-row>
             <b-col>
-                <b-btn variant="success" v-on:click="handleLoadList">Load List</b-btn>
-                <b-btn variant="warning" v-on:click="apiCallReset('todos')">Reset</b-btn>
+                <b-btn
+                    variant="success"
+                    @click="handleLoadList"
+                >
+                    Load List
+                </b-btn>
+                <b-btn
+                    variant="warning"
+                    @click="apiCallReset('todos')"
+                >
+                    Reset
+                </b-btn>
             </b-col>
             <b-col>
-                <b-input v-on:keyup="handleChange($event)" placeholder="Enter something" :value="form.inputField"></b-input>
+                <b-input
+                    placeholder="Enter something"
+                    :value="form.inputField"
+                    @keyup="handleChange($event)"
+                />
             </b-col>
         </b-row>
         <b-row style="margin-top:2%">
@@ -20,15 +39,19 @@
                     variant="info"
                     :show="form.inputField === '' ? false : true"
                 >
-                    {{form.inputField}}
+                    {{ form.inputField }}
                 </b-alert>
             </b-col>
         </b-row>
         <b-row>
             <b-col class="todo-list">
                 <b-list-group>
-                    <b-list-group-item v-for="todo in todos.data" :key="todo.id" variant="success">
-                        {{todo.title}}
+                    <b-list-group-item
+                        v-for="todo in todos.data"
+                        :key="todo.id"
+                        variant="success"
+                    >
+                        {{ todo.title }}
                     </b-list-group-item>
                 </b-list-group>
             </b-col>
