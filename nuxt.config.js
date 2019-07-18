@@ -7,5 +7,9 @@ export default {
     
     css: [
         '@/styles/global.scss'
+    ],
+
+    plugins: [
+        { src: '~/plugins/vuex-persist', ssr: false }
     ]
 };

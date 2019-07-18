@@ -14,9 +14,11 @@
   "dependencies": {
     "axios": "^0.19.0",
     "bootstrap-vue": "^2.0.0-rc.25",
+    "localforage": "^1.7.3",
     "lodash": "^4.17.11",
     "luxon": "^1.16.0",
-    "nuxt": "^2.8.1"
+    "nuxt": "^2.8.1",
+    "vuex-persist": "^2.0.1"
   },
   "devDependencies": {
     "node-sass": "^4.12.0",
