@@ -14,7 +14,7 @@
   "author": "Aleksandar Stojanoski",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.19.0",
+    "@nuxtjs/axios": "^5.5.4",
     "bootstrap-vue": "^2.0.0-rc.25",
     "localforage": "^1.7.3",
     "lodash": "^4.17.14",

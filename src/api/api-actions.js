@@ -1,6 +1,6 @@
 import apiCall from './api-call';
 
-const apiCallReset = ({ commit }, stateKey) => {
+const apiCallReset = function ({ commit }, stateKey) {
     commit('API_CALL_RESET', stateKey);
 };
 

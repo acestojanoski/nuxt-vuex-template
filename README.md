@@ -22,8 +22,9 @@ This is a template for Vue/Nuxt application with Vuex.
 
 ## Technologies and libraries
 
-*   axios
+*   @nuxtjs/axios
 *   bootstrap-vue
+*   localforage
 *   vue
 *   nuxt
 *   luxon
@@ -31,3 +32,6 @@ This is a template for Vue/Nuxt application with Vuex.
 *   sass-loader
 *   vuex
 *   lodash
+*   vuex-persist
+*   eslint
+*   eslint-plugin-vue

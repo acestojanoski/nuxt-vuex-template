@@ -1,6 +1,6 @@
 import { DateTime } from 'luxon';
 
-export const API_CALL_STARTED = (state, { stateKey, request }) => {
+export const API_CALL_STARTED = function (state, { stateKey, request }) {
     state[stateKey] = {
         isLoading: true,
         isLoaded: false,
@@ -10,7 +10,7 @@ export const API_CALL_STARTED = (state, { stateKey, request }) => {
     };
 };
 
-export const API_CALL_FINISHED = (state, { stateKey, response }) => {
+export const API_CALL_FINISHED = function (state, { stateKey, response }) {
     state[stateKey] = {
         isLoading: false,
         isLoaded: true,
@@ -20,7 +20,7 @@ export const API_CALL_FINISHED = (state, { stateKey, response }) => {
     };
 };
 
-export const API_CALL_FAILED = (state, { stateKey, error }) => {
+export const API_CALL_FAILED = function (state, { stateKey, error }) {
     state[stateKey] = {
         isLoading: false,
         isLoaded: false,
@@ -30,6 +30,6 @@ export const API_CALL_FAILED = (state, { stateKey, error }) => {
     };
 };
 
-export const API_CALL_RESET = (state, stateKey ) => {
+export const API_CALL_RESET = function (state, stateKey) {
     state[stateKey] = {};
 };

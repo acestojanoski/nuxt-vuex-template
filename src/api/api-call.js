@@ -1,7 +1,6 @@
 import apiConfig from './api-config';
-import axios from './axios';
 
-const apiCall = ({ commit }, { stateKey, request, queryParameter, queryString }) => {
+const apiCall = function ({ commit }, { stateKey, request, queryParameter, queryString }) {
     if (!request) {
         request = {};
     }
@@ -51,7 +50,7 @@ const apiCall = ({ commit }, { stateKey, request, queryParameter, queryString })
     commit('API_CALL_STARTED', { stateKey, request });
 
     return new Promise((resolve, reject) => {
-        axios({
+        this.$axios({
             url: `${url}${queryParameter ? '/' + queryParameter : ''}${queryString ? '?' + queryString : ''}`,
             method,
             data: request,

@@ -1,7 +1,7 @@
 import { isString } from '../utils/is-string';
 import logger from '../utils/logger';
 
-export const setValue = ({ commit }, { stateKey, value }) => {
+export const setValue = function ({ commit }, { stateKey, value }) {
     try {
         if (!stateKey) {
             throw Error('SET_VALUE action: stateKey not provided.')
