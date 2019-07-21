@@ -25,10 +25,11 @@ export const nuxtServerInit = async function ({ dispatch }) {
 
     if (model === null && connection !== null) {
         model = connection.model('ui');
-        dispatch(
-            'loadContent',
-            await model.find({})
-        );
     }
+
+    dispatch(
+        'loadContent',
+        await model.find({})
+    );
 };
 /* eslint-enable */
