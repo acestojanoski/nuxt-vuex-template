@@ -4,9 +4,9 @@
   "description": "Template for creating applications with vue, nuxt and vuex",
   "main": "index.js",
   "scripts": {
-    "build": "nuxt build",
-    "start": "nuxt start",
-    "dev": "nuxt",
+    "build": "cross-env NODE_ENV=prod nuxt build",
+    "start": "cross-env NODE_ENV=prod nuxt start",
+    "dev": "cross-env NODE_ENV=dev nuxt",
     "build:static": "npm run build && nuxt generate",
     "eslint": "eslint --ext .js,.vue src",
     "eslint:fix": "eslint --ext .js,.vue src --fix"
@@ -15,14 +15,18 @@
   "license": "ISC",
   "dependencies": {
     "@nuxtjs/axios": "^5.5.4",
+    "@nuxtjs/separate-env": "0.0.1",
     "bootstrap-vue": "^2.0.0-rc.25",
+    "dotenv": "^8.0.0",
     "localforage": "^1.7.3",
     "lodash": "^4.17.14",
     "luxon": "^1.16.0",
+    "mongoose": "^5.6.5",
     "nuxt": "^2.8.1",
     "vuex-persist": "^2.0.1"
   },
   "devDependencies": {
+    "cross-env": "^5.2.0",
     "eslint": "^6.0.1",
     "eslint-plugin-vue": "^5.2.3",
     "node-sass": "^4.12.0",

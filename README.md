@@ -35,3 +35,7 @@ This is a template for Vue/Nuxt application with Vuex.
 *   vuex-persist
 *   eslint
 *   eslint-plugin-vue
+*   @nuxtjs/separate-env
+*   dotenv
+*   mongoose
+*   cross-env

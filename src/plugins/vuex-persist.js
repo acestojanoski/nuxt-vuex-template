@@ -10,7 +10,11 @@ export default ({ store }) => {
         new VuexPersistence({
             storage,
             key: 'appState',
-            asyncStorage: true
+            asyncStorage: true,
+            reducer: (state) => ({
+                ...state,
+                content: []
+            })
         }).plugin(store);
     });
 };

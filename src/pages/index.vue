@@ -6,7 +6,7 @@
                     variant="success"
                     show
                 >
-                    Nuxt Vuex Template
+                    {{ title }}
                 </b-alert>
             </b-col>
         </b-row>
@@ -60,7 +60,9 @@
 </template>
 
 <script>
-    import { mapActions, mapState } from 'vuex'; 
+    import { mapActions, mapState } from 'vuex';
+    import { objectHasProperty } from '../utils/object-has-property';
+
     export default {
         computed: {
             ...mapState('apiCalls', [
@@ -68,7 +70,18 @@
             ]),
             ...mapState([
                 'form'
-            ])
+            ]),
+
+            title() {
+                const item = this.$store.state.content.find(item =>
+                    objectHasProperty(item, 'homeTitle')
+                );
+                return item
+                    ? item.homeTitle
+                        ? item.homeTitle
+                        : ''
+                    : '';
+            }
         },
         methods: {
             ...mapActions('apiCalls', [
