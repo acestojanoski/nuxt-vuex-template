@@ -22,7 +22,7 @@
     "lodash": "^4.17.14",
     "luxon": "^1.16.0",
     "mongoose": "^5.6.5",
-    "nuxt": "^2.8.1",
+    "nuxt": "^2.15.8",
     "vuex-persist": "^2.0.1"
   },
   "devDependencies": {
